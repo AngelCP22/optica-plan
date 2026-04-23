@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisionFlow OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="screen screen-login active" data-screen="login">
+        <div class="login-backdrop">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="orb orb-c"></div>
+          <div class="grid-glow"></div>
+        </div>
+
+        <div class="login-panel">
+          <div class="brand-lockup">
+            <div class="brand-mark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <p class="eyebrow">Plataforma integral</p>
+              <h1>VisionFlow OS</h1>
+              <p class="subtle">Diseñado para ópticas, clínicas oftalmológicas y centros visuales.</p>
+            </div>
+          </div>
+
+          <form class="login-form">
+            <label>
+              <span>Usuario</span>
+              <input type="text" value="admin" />
+            </label>
+            <label>
+              <span>Área</span>
+              <select>
+                <option>Administración</option>
+                <option>Recepción</option>
+                <option>Ventas</option>
+                <option>Dirección médica</option>
+              </select>
+            </label>
+            <label>
+              <span>Contraseña</span>
+              <input type="password" value="123456" />
+            </label>
+            <div class="login-actions">
+              <button type="button" class="btn btn-primary" data-go="dashboard">Iniciar sesión</button>
+              <button type="button" class="btn btn-ghost">Recuperar acceso</button>
+            </div>
+          </form>
+
+          <div class="login-footer">
+            <div>
+              <strong>Incluye:</strong> citas, ventas, caja, historias, inventario, facturación y reportes.
+            </div>
+            <div class="status-pill online">Sistema listo</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen-app" data-screen="dashboard">
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-brand">
+            <div class="brand-mark small">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div>
+              <h2>VisionFlow</h2>
+              <p>Optical & Eye Care</p>
+            </div>
+          </div>
+
+          <nav class="nav-list">
+            <button class="nav-item active" data-view="dashboard">
+              <span>Resumen general</span>
+            </button>
+            <button class="nav-item" data-view="appointments">
+              <span>Citas médicas</span>
+            </button>
+            <button class="nav-item" data-view="patients">
+              <span>Pacientes e historias</span>
+            </button>
+            <button class="nav-item" data-view="inventory">
+              <span>Inventario</span>
+            </button>
+            <button class="nav-item" data-view="sales">
+              <span>Nueva venta</span>
+            </button>
+            <button class="nav-item" data-view="sales-history">
+              <span>Historial de ventas</span>
+            </button>
+            <button class="nav-item" data-view="billing">
+              <span>Facturación</span>
+            </button>
+            <button class="nav-item" data-view="reports">
+              <span>Reportes</span>
+            </button>
+            <button class="nav-item" data-view="settings">
+              <span>Configuración</span>
+            </button>
+          </nav>
+
+          <div class="sidebar-card">
+            <p class="eyebrow">Modo multisede</p>
+            <strong>Sede principal</strong>
+            <span>Administración central</span>
+          </div>
+        </aside>
+
+        <main class="workspace">
+          <header class="topbar">
+            <div class="topbar-main">
+              <button class="menu-toggle" id="menuToggle" type="button">☰</button>
+              <div>
+                <p class="eyebrow">Sistema de gestión visual</p>
+                <h3 id="viewTitle">Dashboard operativo</h3>
+              </div>
+            </div>
+
+            <div class="topbar-actions">
+              <button class="icon-btn" type="button">🔔</button>
+              <button class="icon-btn" type="button">⚙</button>
+              <button class="profile-chip" id="profileToggle" type="button">
+                <span class="profile-avatar">A</span>
+                <span>Admin</span>
+              </button>
+            </div>
+
+            <div class="profile-panel" id="profilePanel">
+              <div class="profile-head">
+                <div class="profile-avatar large">A</div>
+                <div>
+                  <strong>Administrador</strong>
+                  <p>admin@visionflow.local</p>
+                </div>
+              </div>
+              <div class="profile-meta">
+                <div><span>Rol</span><strong>Administrador</strong></div>
+                <div><span>Tienda</span><strong>Sede principal</strong></div>
+                <div><span>Estado</span><strong>En línea</strong></div>
+              </div>
+              <button class="btn btn-ghost full" type="button" data-go="login">Cerrar sesión</button>
+            </div>
+          </header>
+
+          <section class="view active" data-view="dashboard">
+            <div class="hero-card">
+              <div>
+                <p class="eyebrow">Vista ejecutiva</p>
+                <h1>Operación clara, amable y lista para crecer</h1>
+                <p>
+                  Unificamos ventas, agenda, atención clínica, inventario y facturación en una sola
+                  experiencia adaptable a cualquier empresa del rubro óptico.
+                </p>
+              </div>
+              <div class="hero-stats">
+                <div class="mini-stat">
+                  <span>Citas hoy</span>
+                  <strong>42</strong>
+                </div>
+                <div class="mini-stat">
+                  <span>Ventas del día</span>
+                  <strong>S/ 12,480</strong>
+                </div>
+                <div class="mini-stat">
+                  <span>Entregas pendientes</span>
+                  <strong>18</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-grid">
+              <article class="stat-card accent-cyan">
+                <span>Pacientes registrados</span>
+                <strong>18,240</strong>
+                <small>+128 esta semana</small>
+              </article>
+              <article class="stat-card accent-blue">
+                <span>Consultas activas</span>
+                <strong>67</strong>
+                <small>5 en espera de examen</small>
+              </article>
+              <article class="stat-card accent-gold">
+                <span>Ingreso mensual</span>
+                <strong>S/ 186,900</strong>
+                <small>12% sobre el mes anterior</small>
+              </article>
+              <article class="stat-card accent-green">
+                <span>Stock crítico</span>
+                <strong>14 SKU</strong>
+                <small>Lentes y soluciones</small>
+              </article>
+            </div>
+
+            <div class="content-grid">
+              <article class="panel panel-wide">
+                <div class="panel-head">
+                  <h4>Agenda del día</h4>
+                  <button class="btn btn-soft" data-nav="appointments" type="button">Ver agenda</button>
+                </div>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <strong>09:00</strong>
+                    <div>
+                      <p>Control postoperatorio</p>
+                      <span>Carla Mendoza · Dra. Paula Rivera</span>
+                    </div>
+                    <span class="status-pill scheduled">Confirmada</span>
+                  </div>
+                  <div class="timeline-item">
+                    <strong>10:30</strong>
+                    <div>
+                      <p>Examen visual integral</p>
+                      <span>Jorge Paredes · Optometría</span>
+                    </div>
+                    <span class="status-pill in-progress">En sala</span>
+                  </div>
+                  <div class="timeline-item">
+                    <strong>12:15</strong>
+                    <div>
+                      <p>Entrega de montura bifocal</p>
+                      <span>Lucía Flores · Mostrador</span>
+                    </div>
+                    <span class="status-pill pending">Pendiente</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="panel">
+                <div class="panel-head">
+                  <h4>Accesos rápidos</h4>
+                </div>
+                <div class="quick-grid">
+                  <button class="quick-card" data-nav="sales" type="button">Registrar venta</button>
+                  <button class="quick-card" data-nav="appointments" type="button">Crear cita</button>
+                  <button class="quick-card" data-nav="patients" type="button">Nueva historia</button>
+                  <button class="quick-card" data-nav="billing" type="button">Emitir comprobante</button>
+                  <button class="quick-card" data-nav="inventory" type="button">Ingreso a stock</button>
+                  <button class="quick-card" data-nav="reports" type="button">Reporte diario</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="appointments">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Agenda médica</p>
+                <h1>Citas, seguimiento y recordatorios</h1>
+              </div>
+              <button class="btn btn-primary" type="button">+ Nueva cita</button>
+            </div>
+
+            <div class="toolbar">
+              <input type="search" placeholder="Buscar paciente, DNI o teléfono" />
+              <select>
+                <option>Especialidad</option>
+                <option>Oftalmología</option>
+                <option>Optometría</option>
+                <option>Contactología</option>
+              </select>
+              <select>
+                <option>Sede</option>
+                <option>Principal</option>
+                <option>Miraflores</option>
+                <option>San Isidro</option>
+              </select>
+              <input type="date" />
+            </div>
+
+            <div class="schedule-layout">
+              <article class="panel">
+                <div class="panel-head">
+                  <h4>Próximas citas</h4>
+                </div>
+                <div class="data-list">
+                  <div class="data-row">
+                    <div>
+                      <strong>Rosa Aliaga</strong>
+                      <span>Consulta general · 09:15</span>
+                    </div>
+                    <span class="status-pill scheduled">Confirmada</span>
+                  </div>
+                  <div class="data-row">
+                    <div>
+                      <strong>Daniel Mercado</strong>
+                      <span>Fondo de ojo · 10:00</span>
+                    </div>
+                    <span class="status-pill pending">Por llegar</span>
+                  </div>
+                  <div class="data-row">
+                    <div>
+                      <strong>María Lazo</strong>
+                      <span>Prueba de lentes · 11:40</span>
+                    </div>
+                    <span class="status-pill warning">Reprogramar</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="panel panel-wide">
+                <div class="panel-head">
+                  <h4>Calendario de atención</h4>
+                  <div class="inline-actions">
+                    <button class="btn btn-soft" type="button">Hoy</button>
+                    <button class="btn btn-soft" type="button">Semana</button>
+                  </div>
+                </div>
+                <div class="calendar-grid">
+                  <div class="calendar-slot filled">
+                    <span>08:00</span>
+                    <strong>Screening visual</strong>
+                  </div>
+                  <div class="calendar-slot">
+                    <span>09:00</span>
+                    <strong>Disponible</strong>
+                  </div>
+                  <div class="calendar-slot filled">
+                    <span>10:00</span>
+                    <strong>Consulta oftalmológica</strong>
+                  </div>
+                  <div class="calendar-slot">
+                    <span>11:00</span>
+                    <strong>Disponible</strong>
+                  </div>
+                  <div class="calendar-slot filled">
+                    <span>12:00</span>
+                    <strong>Entrega de lentes</strong>
+                  </div>
+                  <div class="calendar-slot">
+                    <span>13:00</span>
+                    <strong>Bloque administrativo</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="patients">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Base clínica</p>
+                <h1>Pacientes, antecedentes e historias</h1>
+              </div>
+              <div class="inline-actions">
+                <button class="btn btn-soft" type="button">Exportar</button>
+                <button class="btn btn-primary" type="button">+ Nuevo paciente</button>
+              </div>
+            </div>
+
+            <div class="toolbar">
+              <input type="search" placeholder="Buscar por código, nombre, DNI o celular" />
+              <select>
+                <option>Todos los estados</option>
+                <option>Nuevos</option>
+                <option>En seguimiento</option>
+                <option>Alta</option>
+              </select>
+            </div>
+
+            <article class="panel table-panel">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Código</th>
+                    <th>Paciente</th>
+                    <th>DNI</th>
+                    <th>Última visita</th>
+                    <th>Diagnóstico</th>
+                    <th>Próxima acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HC-10452</td>
+                    <td>Prudencia Alipio Cristóbal</td>
+                    <td>08401422</td>
+                    <td>22/04/2026</td>
+                    <td>Control de catarata</td>
+                    <td><span class="status-pill pending">Llamar y agendar</span></td>
+                  </tr>
+                  <tr>
+                    <td>HC-10453</td>
+                    <td>Hermenegilda Santillán</td>
+                    <td>31810313</td>
+                    <td>20/04/2026</td>
+                    <td>Adaptación multifocal</td>
+                    <td><span class="status-pill scheduled">Entrega confirmada</span></td>
+                  </tr>
+                  <tr>
+                    <td>HC-10454</td>
+                    <td>Víctor Ortiz Vargas</td>
+                    <td>74100211</td>
+                    <td>18/04/2026</td>
+                    <td>Retinopatía diabética</td>
+                    <td><span class="status-pill warning">Revisión urgente</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </section>
+
+          <section class="view" data-view="inventory">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Control de stock</p>
+                <h1>Productos, monturas, lunas y servicios</h1>
+              </div>
+              <button class="btn btn-primary" type="button">+ Registrar ingreso</button>
+            </div>
+
+            <div class="module-grid">
+              <article class="module-card">
+                <strong>Productos</strong>
+                <p>Registro, ingresos, envíos, kardex y vendidos.</p>
+              </article>
+              <article class="module-card">
+                <strong>Monturas</strong>
+                <p>Stock por marca, color, serie y ubicación.</p>
+              </article>
+              <article class="module-card">
+                <strong>Lunas</strong>
+                <p>Monofocal, bifocal, blue cut, antirreflejo.</p>
+              </article>
+              <article class="module-card">
+                <strong>Servicios</strong>
+                <p>Consultas, exámenes, procedimientos y packs.</p>
+              </article>
+              <article class="module-card">
+                <strong>Órdenes de laboratorio</strong>
+                <p>Seguimiento de pedidos y tiempos de entrega.</p>
+              </article>
+              <article class="module-card">
+                <strong>Alertas de reposición</strong>
+                <p>Control de mínimos y vencimientos.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="sales">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Punto de venta</p>
+                <h1>Venta adaptable a óptica, clínica y mostrador</h1>
+              </div>
+            </div>
+
+            <div class="sales-layout">
+              <article class="panel panel-wide">
+                <div class="form-grid">
+                  <label>
+                    <span>DNI / RUC</span>
+                    <input type="text" placeholder="Buscar documento" />
+                  </label>
+                  <label>
+                    <span>Cliente / Razón social</span>
+                    <input type="text" placeholder="Nombres y apellidos" />
+                  </label>
+                  <label>
+                    <span>Paciente</span>
+                    <input type="text" placeholder="Seleccionar paciente" />
+                  </label>
+                  <label>
+                    <span>Profesional</span>
+                    <select>
+                      <option>Dra. Paula Rivera</option>
+                      <option>Dr. Edwin López</option>
+                      <option>Opt. Sandra Guzmán</option>
+                    </select>
+                  </label>
+                  <label class="full-span">
+                    <span>Dirección</span>
+                    <input type="text" placeholder="Dirección de facturación o paciente" />
+                  </label>
+                </div>
+
+                <div class="sale-tags">
+                  <button class="tag-btn active" type="button">Monturas</button>
+                  <button class="tag-btn" type="button">Lunas</button>
+                  <button class="tag-btn" type="button">Productos</button>
+                  <button class="tag-btn" type="button">Servicios</button>
+                  <button class="tag-btn" type="button">L. Contacto</button>
+                  <button class="tag-btn" type="button">Pedido Lab.</button>
+                </div>
+
+                <article class="panel nested">
+                  <div class="panel-head">
+                    <h4>Detalle de venta</h4>
+                  </div>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Cant.</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                        <th>Precio</th>
+                        <th>Importe</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Montura acetato modelo Verona</td>
+                        <td>Montura</td>
+                        <td>S/ 280.00</td>
+                        <td>S/ 280.00</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Luna blue cut antirreflejo</td>
+                        <td>Luna</td>
+                        <td>S/ 180.00</td>
+                        <td>S/ 360.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+              </article>
+
+              <article class="panel">
+                <div class="panel-head">
+                  <h4>Datos de venta</h4>
+                </div>
+                <div class="stack-fields">
+                  <label>
+                    <span>Tienda</span>
+                    <select>
+                      <option>Administración</option>
+                      <option>Sede principal</option>
+                      <option>Miraflores</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Tipo</span>
+                    <select>
+                      <option>Venta normal</option>
+                      <option>Separado</option>
+                      <option>Cortesía</option>
+                      <option>Garantía</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Comentario</span>
+                    <textarea placeholder="Observaciones de la venta"></textarea>
+                  </label>
+                </div>
+
+                <div class="payment-stack">
+                  <div class="payment-row">
+                    <span>A pagar</span>
+                    <strong>S/ 640.00</strong>
+                  </div>
+                  <div class="payment-row">
+                    <span>Efectivo</span>
+                    <strong>S/ 200.00</strong>
+                  </div>
+                  <div class="payment-row">
+                    <span>Tarjeta</span>
+                    <strong>S/ 240.00</strong>
+                  </div>
+                  <div class="payment-row">
+                    <span>Transferencia</span>
+                    <strong>S/ 200.00</strong>
+                  </div>
+                </div>
+
+                <div class="inline-actions spread">
+                  <button class="btn btn-primary" type="button">Generar venta</button>
+                  <button class="btn btn-soft" type="button">Generar recibo</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="sales-history">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Seguimiento comercial</p>
+                <h1>Historial de ventas y estados</h1>
+              </div>
+              <button class="btn btn-primary" data-nav="sales" type="button">+ Nueva venta</button>
+            </div>
+
+            <div class="toolbar">
+              <input type="text" placeholder="Código de venta" />
+              <select>
+                <option>Tienda</option>
+                <option>Administración</option>
+                <option>Miraflores</option>
+              </select>
+              <input type="date" />
+              <input type="search" placeholder="Buscar cliente" />
+            </div>
+
+            <article class="panel table-panel">
+              <table>
+                <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>Código</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Notas</th>
+                    <th>Tipo</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3035</td>
+                    <td>R057</td>
+                    <td>Gloria Gutierrez Pariona</td>
+                    <td>08/01/2026</td>
+                    <td>Evaluación de cortesía</td>
+                    <td>Recibo</td>
+                    <td>S/ 0.00</td>
+                    <td><span class="status-pill success">Aceptada</span></td>
+                  </tr>
+                  <tr>
+                    <td>3034</td>
+                    <td>R058</td>
+                    <td>Lucia Emilia Yucra</td>
+                    <td>08/01/2026</td>
+                    <td>Control Avastin OD</td>
+                    <td>Recibo</td>
+                    <td>S/ 70.00</td>
+                    <td><span class="status-pill success">Aceptada</span></td>
+                  </tr>
+                  <tr>
+                    <td>3033</td>
+                    <td>R059</td>
+                    <td>Oscar Humberto Pereyra</td>
+                    <td>08/01/2026</td>
+                    <td>Control catarata AO</td>
+                    <td>Recibo</td>
+                    <td>S/ 65.00</td>
+                    <td><span class="status-pill pending">Por entregar</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </section>
+
+          <section class="view" data-view="billing">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Comprobantes electrónicos</p>
+                <h1>Facturación, series y trazabilidad</h1>
+              </div>
+              <div class="inline-actions">
+                <button class="btn btn-soft" type="button">Exportar</button>
+                <button class="btn btn-primary" type="button">+ Nueva venta</button>
+              </div>
+            </div>
+
+            <div class="toolbar">
+              <input type="text" placeholder="Código" />
+              <input type="text" placeholder="Serie" />
+              <input type="text" placeholder="Número" />
+              <input type="date" />
+              <input type="search" placeholder="Cliente" />
+            </div>
+
+            <div class="stats-grid billing-stats">
+              <article class="stat-card accent-cyan">
+                <span>Boletas emitidas</span>
+                <strong>142</strong>
+                <small>Hoy</small>
+              </article>
+              <article class="stat-card accent-blue">
+                <span>Facturas</span>
+                <strong>37</strong>
+                <small>Con XML y PDF</small>
+              </article>
+              <article class="stat-card accent-green">
+                <span>Enviadas a SUNAT</span>
+                <strong>171</strong>
+                <small>98.8% aceptadas</small>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="reports">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Análisis del negocio</p>
+                <h1>Reportes operativos, comerciales y financieros</h1>
+              </div>
+            </div>
+
+            <div class="module-grid">
+              <article class="module-card">
+                <strong>Reporte de caja</strong>
+                <p>Detalle por efectivo, tarjeta y transferencia.</p>
+              </article>
+              <article class="module-card">
+                <strong>Utilidad por venta</strong>
+                <p>Rentabilidad por categoría, vendedor y sede.</p>
+              </article>
+              <article class="module-card">
+                <strong>Ventas por profesional</strong>
+                <p>Seguimiento por médico, optómetra o asesor.</p>
+              </article>
+              <article class="module-card">
+                <strong>Historial de comprobantes</strong>
+                <p>Boletas, facturas, notas y estados electrónicos.</p>
+              </article>
+              <article class="module-card">
+                <strong>Gastos corporativos</strong>
+                <p>Fijos, variables e ingresos vs gastos.</p>
+              </article>
+              <article class="module-card">
+                <strong>Capital e ingresos</strong>
+                <p>Movimientos de caja, aportes y cierres diarios.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="view" data-view="settings">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Administración del sistema</p>
+                <h1>Opciones adicionales que conviene incluir</h1>
+              </div>
+            </div>
+
+            <div class="settings-grid">
+              <article class="panel">
+                <h4>Seguridad y accesos</h4>
+                <ul class="plain-list">
+                  <li>Roles por área: caja, recepción, ventas, médicos, admin.</li>
+                  <li>Bitácora de acciones y anulaciones.</li>
+                  <li>Permisos por sede y módulo.</li>
+                </ul>
+              </article>
+              <article class="panel">
+                <h4>Operación clínica</h4>
+                <ul class="plain-list">
+                  <li>Plantillas de examen visual y recetas.</li>
+                  <li>Adjuntos: órdenes, imágenes y documentos.</li>
+                  <li>Alertas de control y seguimiento postventa.</li>
+                </ul>
+              </article>
+              <article class="panel">
+                <h4>Gestión comercial</h4>
+                <ul class="plain-list">
+                  <li>Separados, abonos, saldos y entregas.</li>
+                  <li>Promociones, combos y descuentos autorizados.</li>
+                  <li>Convenios corporativos y aseguradoras.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </main>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
