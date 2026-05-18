@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oftal Medic - Preview de diseno</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="preview-shell">
+    <aside class="sidebar">
+      <img class="brand-logo" src="./assets/logo-reference.svg" alt="Oftal Medic">
+      <nav class="nav">
+        <a class="active" href="#dashboard"><span class="icon">IN</span>Inicio</a>
+        <a href="#agenda"><span class="icon">CI</span>Citas medicas</a>
+        <a href="#pacientes"><span class="icon">PA</span>Pacientes</a>
+        <a href="#historias"><span class="icon">HC</span>Historias clinicas</a>
+        <a href="#ventas"><span class="icon">VE</span>Nueva venta</a>
+        <a href="#inventario"><span class="icon">AL</span>Inventario</a>
+        <a href="#reportes"><span class="icon">RE</span>Reportes</a>
+      </nav>
+      <div class="help-card">
+        <strong>Vista de presentacion</strong>
+        <span>Maqueta estatica para revisar experiencia visual y flujo comercial.</span>
+      </div>
+    </aside>
+
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Sistema de gestion oftalmologica</p>
+          <h1>Oftal Medic</h1>
+        </div>
+        <div class="worker">
+          <div class="avatar">ED</div>
+          <div>
+            <strong>Edwin Demo</strong>
+            <span>Administrador</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="hero-panel" id="dashboard">
+        <div class="hero-copy">
+          <p class="eyebrow">Operacion diaria</p>
+          <h2>Cuidamos la vision, ordenamos la clinica.</h2>
+          <p>Un panel claro para agenda, pacientes, caja, inventario y ventas, pensado para personal que necesita rapidez sin perder control.</p>
+          <div class="hero-actions">
+            <a href="#ventas" class="primary-action">Nueva venta</a>
+            <a href="#historias" class="secondary-action">Ver historia clinica</a>
+          </div>
+        </div>
+        <div class="summary-grid">
+          <article><span>Citas hoy</span><strong>18</strong><small>6 pendientes</small></article>
+          <article><span>Pacientes</span><strong>1,365</strong><small>Base migrada</small></article>
+          <article><span>Ventas</span><strong>S/ 1.6M</strong><small>Historico cargado</small></article>
+          <article><span>Por cobrar</span><strong>S/ 230K</strong><small>158 pendientes</small></article>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel agenda-panel" id="agenda">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Agenda</p>
+              <h3>Citas medicas de hoy</h3>
+            </div>
+            <button>+ Nueva cita</button>
+          </div>
+          <div class="appointment-list">
+            <div><time>08:00</time><strong>Paciente Demo 001</strong><span class="ok">Confirmada</span></div>
+            <div><time>09:20</time><strong>Paciente Demo 002</strong><span class="warning">En consulta</span></div>
+            <div><time>11:30</time><strong>Paciente Demo 003</strong><span>Pendiente</span></div>
+            <div><time>15:00</time><strong>Paciente Demo 004</strong><span class="ok">Confirmada</span></div>
+          </div>
+        </article>
+
+        <article class="panel" id="pacientes">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Pacientes</p>
+              <h3>Busqueda rapida</h3>
+            </div>
+            <button>Registrar</button>
+          </div>
+          <div class="search-card">
+            <label>DNI, historia o nombre</label>
+            <div class="fake-input">Ej. HC-OLD-000245, 70000000</div>
+          </div>
+          <table>
+            <thead><tr><th>Historia</th><th>Paciente</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td>HC-OLD-000245</td><td>Paciente Demo 001</td><td><span class="ok">Activo</span></td></tr>
+              <tr><td>HC-OLD-000891</td><td>Paciente Demo 002</td><td><span class="ok">Activo</span></td></tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="panel wide" id="historias">
+          <div class="patient-header">
+            <div class="patient-photo">PD</div>
+            <div>
+              <p class="eyebrow">Historia clinica</p>
+              <h3>Paciente Demo</h3>
+              <span>DNI 70000000 - 34 anos - Femenino</span>
+            </div>
+            <button>+ Nueva consulta</button>
+          </div>
+          <div class="clinical-grid">
+            <div><span>Ultima consulta</span><strong>17/05/2026</strong></div>
+            <div><span>Diagnostico</span><strong>Miopia leve</strong></div>
+            <div><span>Proxima cita</span><strong>24/05/2026</strong></div>
+          </div>
+          <div class="note-box">
+            <strong>Resumen clinico</strong>
+            <p>Ficha ordenada por antecedentes, consultas, examenes, recetas y documentos. Pensada para lectura rapida del medico.</p>
+          </div>
+        </article>
+
+        <article class="panel wide sale-panel" id="ventas">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Comercial</p>
+              <h3>Nueva venta / comprobante</h3>
+            </div>
+            <span class="status-pill">Venta pendiente permitida</span>
+          </div>
+          <div class="sale-layout">
+            <div class="sale-form">
+              <div class="fake-input">Paciente Demo - DNI 70000000</div>
+              <table>
+                <thead><tr><th>ITEM</th><th>Descripcion</th><th>Cant.</th><th>Total</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Cirugia retina - adelanto</td><td>1</td><td>S/ 4,000.00</td></tr>
+                  <tr><td>2</td><td>Control postoperatorio</td><td>1</td><td>S/ 80.00</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="payment-card">
+              <span>Total</span>
+              <strong>S/ 4,080.00</strong>
+              <p>Pagado: S/ 2,000.00</p>
+              <p>Saldo: S/ 2,080.00</p>
+              <button>Generar nota</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel" id="inventario">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Almacen</p>
+              <h3>Inventario por sede</h3>
+            </div>
+            <button>+ Producto</button>
+          </div>
+          <div class="inventory-cards">
+            <div><strong>104</strong><span>Productos y servicios</span></div>
+            <div><strong>4</strong><span>Sedes</span></div>
+            <div><strong>SKU</strong><span>Codigo automatico</span></div>
+          </div>
+        </article>
+
+        <article class="panel" id="reportes">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Reportes</p>
+              <h3>Caja y ventas</h3>
+            </div>
+            <button>Exportar</button>
+          </div>
+          <div class="bar-chart" aria-label="Grafico de ventas de demo">
+            <span style="height:38%"></span>
+            <span style="height:72%"></span>
+            <span style="height:54%"></span>
+            <span style="height:88%"></span>
+            <span style="height:66%"></span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
