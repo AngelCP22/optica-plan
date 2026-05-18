@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" role="img" aria-label="Oftal Medic">
+  <rect width="820" height="220" rx="28" fill="#ffffff"/>
+  <path d="M82 86c48-48 112-48 160 0" fill="none" stroke="#1eb6bd" stroke-width="14" stroke-linecap="round"/>
+  <path d="M70 107c58 46 124 46 184 0" fill="none" stroke="#074b86" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="162" cy="96" r="44" fill="#e5f8fb"/>
+  <circle cx="162" cy="96" r="25" fill="#0a65ad"/>
+  <circle cx="172" cy="84" r="10" fill="#ffffff"/>
+  <path d="M42 122c37 28 79 41 121 41s84-13 121-41" fill="none" stroke="#18b7b7" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+  <text x="315" y="91" fill="#08335f" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700">OFTAL MEDIC</text>
+  <text x="319" y="132" fill="#19aeb6" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1">CENTRO OFTALMOLOGICO</text>
+  <text x="319" y="164" fill="#5d7190" font-family="Arial, sans-serif" font-size="16">Preview de gestion clinica</text>
+</svg>
