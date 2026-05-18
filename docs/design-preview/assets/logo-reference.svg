@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" role="img" aria-label="Oftal Medic">
-  <rect width="520" height="220" rx="28" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-label="Oftal Medic">
+  <rect width="760" height="220" rx="28" fill="#ffffff"/>
   <path d="M80 86c46-48 109-48 156 0" fill="none" stroke="#1eb6bd" stroke-width="14" stroke-linecap="round"/>
   <path d="M70 106c56 46 121 46 176 0" fill="none" stroke="#074b86" stroke-width="12" stroke-linecap="round"/>
   <circle cx="158" cy="96" r="44" fill="#e5f8fb"/>
